@@ -42,7 +42,7 @@ float main(){
 	printf(" 3. Tabung\n");
 	printf(" 4. Kerucut\n");
 	printf(" 5. Bola\n");
-	printf(" 6. Keluar program\n");
+	printf(" 0. Keluar program\n");
 	printf("================================================\n");
 	printf("Masukkan pilihan anda : ");
 	scanf("%d", &bangunruang);
@@ -133,7 +133,7 @@ float main(){
 			lpbola(r3);
 			break;
 		// Keluar Program
-		case 6:
+		case 0:
 			return 0;
 		default:
 			printf("Format input salah. . .");
