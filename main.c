@@ -12,7 +12,7 @@
 
 int main(){
 	
-	int pilihan;
+	int bangunruang;
 	
 	// Variabel Kubus
 	int s;
@@ -24,20 +24,21 @@ int main(){
 	int r;
 	int t2;
 	
-	
 	// Main Menu
+	main:
 	printf("================================================\n");
-	printf("  Program Penghitung Luas Permukaan & Volume\n");
+	printf("  Program Penghitung Luas tes Permukaan & Volume\n");
 	printf("================================================\n");
 	printf(" 1. Kubus\n");
 	printf(" 2. Balok\n");
 	printf(" 3. Tabung\n");
+	printf(" 4. Keluar program\n");
 	printf("================================================\n");
 	printf("Masukkan pilihan anda : ");
-	scanf("%d", &pilihan);
+	scanf("%d", &bangunruang);
 
-	switch (pilihan) {
-		// Tabung
+	switch (bangunruang) {
+		// Kubus
 		case 1:
 			system("cls");
 			printf("===================================\n");
@@ -45,7 +46,8 @@ int main(){
 			printf("===================================\n");
 			printf(" Masukkan Sisi Kubus : ");
   	   		scanf("%d", &s);
-  	   		printf("\n");
+  	   		/* Output tabung */
+   		  	printf("\n");
   	   		printf(" Output: \n");
   	   		vlkubus(s);
 			lpkubus(s);
@@ -63,7 +65,7 @@ int main(){
 			scanf("%d", &l);
 			printf(" Masukkan tinggi balok : ");
 			scanf("%d", &t);
-			// Output balok
+			/* Output balok */
 			printf("\n");
 			printf(" Output: \n");
 			vlbalok(p,l,t);
@@ -79,13 +81,18 @@ int main(){
 			printf(" Masukkan jari - jari: ");
 			scanf("%d", &r);
 			printf(" Masukkan tinggi: ");
-			scanf("%d", t2);
+			scanf("%d", &t2);
+			/* Output Tabung */
+			printf("\n");
 			printf(" Output: \n");
 			vltabung(r,t2);
 			lptabung(r,t2);
 			break;
+		// Keluar Program
+		case 4:
+			return 0;
 		default:
-			printf("Input anda salah. . .");
+			printf("Format input salah. . .");
 			break;	
 	}
 
@@ -102,9 +109,10 @@ int main(){
 	printf("												  \n");
 
 	printf("==================================================\n");
-	printf(" Tekan tombol apapun untuk mengakhiri program . . \n");	
+	printf(" Tekan tombol apapun untuk kembali ke menu awal .. \n");	
 	printf("==================================================\n");
 	
 	getch();
-
+	system("cls");
+	goto main;
 }

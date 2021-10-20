@@ -4,14 +4,20 @@
 // University of Muhammadiyah Malang
 //
 
-void lpkubus(int s){
+// Luas Permukaan Kubus Function
+// Usage : lpkubus( $var_sisi )
+int lpkubus( int s ){
 	printf(" Luas permukaan kubus = %d\n", 6 * s * s);
 }
 
-void lpbalok(int p, int l, int t){
+// Luas Permukaan Balok Function
+// Usage : lpbalok( $var_panjang , $var_lebar , $var_tinggi )
+int lpbalok( int p, int l , int t ){
 	printf(" Luas permukaan balok = %d\n", 2 * (( p * l ) + ( p * t ) + ( l * t )));
 }
 
-void lptabung(int r, int t2){
-	printf(" Luas permukaan tabung = %d\n", ( 2 * 3.14 * r * r ) + ( 2 * 3.14 * r * t2 ));
+// Luas Permukaan Tabung Function
+// Usage : lptabung( $var_jari-jari , $var_tinggi )
+int lptabung( int r, int t2 ){
+	printf(" Luas permukaan tabung = %d\n", 2 * 22 * r * ( r + t2 ) / 7 );
 }
