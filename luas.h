@@ -6,18 +6,24 @@
 
 // Luas Permukaan Kubus Function
 // Usage : lpkubus( $var_sisi )
-int lpkubus( int s ){
-	printf(" Luas permukaan kubus = %d\n", 6 * s * s);
+float lpkubus( float s ){
+	printf(" Luas permukaan kubus = %.2f\n", 6 * s * s);
 }
 
 // Luas Permukaan Balok Function
 // Usage : lpbalok( $var_panjang , $var_lebar , $var_tinggi )
-int lpbalok( int p, int l , int t ){
-	printf(" Luas permukaan balok = %d\n", 2 * (( p * l ) + ( p * t ) + ( l * t )));
+float lpbalok( float p, float l , float t ){
+	printf(" Luas permukaan balok = %.2f\n", 2 * (( p * l ) + ( p * t ) + ( l * t )));
 }
 
 // Luas Permukaan Tabung Function
 // Usage : lptabung( $var_jari-jari , $var_tinggi )
-int lptabung( int r, int t2 ){
-	printf(" Luas permukaan tabung = %d\n", 2 * 22 * r * ( r + t2 ) / 7 );
+float lptabung( float r, float t2 ){
+	printf(" Luas permukaan tabung = %.2f\n", 2 * 22 * r * ( r + t2 ) / 7 );
+}
+
+// Luas Permukaan Kerucut Function
+// Usage : lpkerucut( $var_tinggi , $var_jari-jari , $var_garis-pelukis )
+float lpkerucut( float t3, float r2, float s2 ){
+	printf(" Luas permukaan kerucut = %.2f\n", ( 22 * r2 * r2 / 7 ) + ( 22 * r2 * s2 / 7 ));
 }

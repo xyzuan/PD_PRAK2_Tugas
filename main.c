@@ -10,20 +10,25 @@
 #include "luas.h"
 #include "volume.h"
 
-int main(){
+float main(){
 	
 	int bangunruang;
 	
 	// Variabel Kubus
-	int s;
+	float s;
 	
 	// Variabel Balok
-	int p,l,t;
+	float p,l,t;
 	
 	// Variabel Tabung
-	int r;
-	int t2;
+	float r;
+	float t2;
 	
+	// Variabel Kerucut
+	float r2;
+	float t3;
+	float s2;
+
 	// Main Menu
 	main:
 	printf("================================================\n");
@@ -32,7 +37,8 @@ int main(){
 	printf(" 1. Kubus\n");
 	printf(" 2. Balok\n");
 	printf(" 3. Tabung\n");
-	printf(" 4. Keluar program\n");
+	printf(" 4. Kerucut\n");
+	printf(" 5. Keluar program\n");
 	printf("================================================\n");
 	printf("Masukkan pilihan anda : ");
 	scanf("%d", &bangunruang);
@@ -45,7 +51,7 @@ int main(){
 			printf("==       Menghitung Kubus       ===\n");
 			printf("===================================\n");
 			printf(" Masukkan Sisi Kubus : ");
-  	   		scanf("%d", &s);
+  	   		scanf("%f", &s);
   	   		/* Output tabung */
    		  	printf("\n");
   	   		printf(" Output: \n");
@@ -60,11 +66,11 @@ int main(){
 			printf("==       Menghitung Balok       ===\n");
 			printf("===================================\n");
 			printf(" Masukkan panjang balok : ");
-			scanf("%d", &p);
+			scanf("%f", &p);
 			printf(" Masukkan lebar balok : ");
-			scanf("%d", &l);
+			scanf("%f", &l);
 			printf(" Masukkan tinggi balok : ");
-			scanf("%d", &t);
+			scanf("%f", &t);
 			/* Output balok */
 			printf("\n");
 			printf(" Output: \n");
@@ -79,17 +85,36 @@ int main(){
 			printf("==      Menghitung Tabung       ===\n");
 			printf("===================================\n");
 			printf(" Masukkan jari - jari: ");
-			scanf("%d", &r);
+			scanf("%f", &r);
 			printf(" Masukkan tinggi: ");
-			scanf("%d", &t2);
+			scanf("%f", &t2);
 			/* Output Tabung */
 			printf("\n");
 			printf(" Output: \n");
 			vltabung(r,t2);
 			lptabung(r,t2);
 			break;
-		// Keluar Program
+
+		// Kerucut
 		case 4:
+			system("cls");
+			printf("===================================\n");
+			printf("==      Menghitung Kerucut      ===\n");
+			printf("===================================\n");
+			printf(" Masukkan tinggi: ");
+			scanf("%f", &t3);
+			printf(" Masukkan jari - jari: ");
+			scanf("%f", &r2);
+			printf(" Masukkan garis pelukis: ");
+			scanf("%f", &s);
+			/* Output Kerucut */
+			printf("\n");
+			printf(" Output: \n");
+			vlkerucut(t3,r2);
+			lpkerucut(t3,r2,s2);
+			break;
+		// Keluar Program
+		case 5:
 			return 0;
 		default:
 			printf("Format input salah. . .");
