@@ -27,3 +27,9 @@ float lptabung( float r, float t2 ){
 float lpkerucut( float t3, float r2, float s2 ){
 	printf(" Luas permukaan kerucut = %.2f\n", ( 22 * r2 * r2 / 7 ) + ( 22 * r2 * s2 / 7 ));
 }
+
+// Luas Permukaan Bola Function
+// Usage : lpbola( $var_jari-jari )
+float lpbola( float r3 ){
+	printf(" Luas permukaan bola = %.2f\n", 4 * 22 * r3 * r3 / 7 );
+}

@@ -22,8 +22,14 @@ float vltabung(float r, float t2){
 	printf(" Volume tabung = %.2f\n", 22 * r * r * t2 / 7 );
 }
 
-// Volume Permukaan Kerucut Function
+// Volume Kerucut Function
 // Usage : vlkerucut( $var_tinggi , $var_jari-jari , $var_garis-pelukis )
 float vlkerucut( float t3, float r2 ){
 	printf(" Volume permukaan kerucut = %.2f\n", 0.3 * 22 * r2 * r2 * t3 / 7 );
+}
+
+// Volume Bola Function
+// Usage : vlbola( $var_jari-jari )
+float vlbola( float r3 ){
+	printf(" Volume bola = %.2f\n", 1.3 * 22 * r3 * r3 * r3 / 7 );
 }

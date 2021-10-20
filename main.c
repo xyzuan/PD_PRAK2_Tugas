@@ -29,6 +29,9 @@ float main(){
 	float t3;
 	float s2;
 
+	// Variabel Bola
+	float r3;
+
 	// Main Menu
 	main:
 	printf("================================================\n");
@@ -38,7 +41,8 @@ float main(){
 	printf(" 2. Balok\n");
 	printf(" 3. Tabung\n");
 	printf(" 4. Kerucut\n");
-	printf(" 5. Keluar program\n");
+	printf(" 5. Bola\n");
+	printf(" 6. Keluar program\n");
 	printf("================================================\n");
 	printf("Masukkan pilihan anda : ");
 	scanf("%d", &bangunruang);
@@ -113,8 +117,23 @@ float main(){
 			vlkerucut(t3,r2);
 			lpkerucut(t3,r2,s2);
 			break;
-		// Keluar Program
+
+		// Bola
 		case 5:
+			system("cls");
+			printf("===================================\n");
+			printf("==        Menghitung Bola       ===\n");
+			printf("===================================\n");
+			printf(" Masukkan jari - jari: ");
+			scanf("%f", &r3);
+			/* Output Bola */
+			printf("\n");
+			printf(" Output: \n");
+			vlbola(r3);
+			lpbola(r3);
+			break;
+		// Keluar Program
+		case 6:
 			return 0;
 		default:
 			printf("Format input salah. . .");
