@@ -1,18 +1,19 @@
-//
-// Jody Yuantoro ( 2021-147 )
-// Informatics Engineering, Faculty of Engineering
-// University of Muhammadiyah Malang
-//
+/*
+	Jody Yuantoro ( 2021-147 )
+	Informatics Engineering, Faculty of Engineering
+	University of Muhammadiyah Malang
+*/
 
 // Library
 #include <stdio.h>
+#include <stdlib.h>
 #include <conio.h>
 #include "luas.h"
 #include "volume.h"
 
 float main(){
 	
-	int bangunruang;
+	int mainmenu;
 	
 	// Variabel Kubus
 	float s;
@@ -44,23 +45,17 @@ float main(){
 	printf(" 5. Bola\n");
 	printf(" 0. Keluar program\n");
 	printf("================================================\n");
-	printf("Masukkan pilihan anda : ");
-	scanf("%d", &bangunruang);
+	printf("Masukkan pilihan anda : "), scanf("%d", &mainmenu);
 
-	switch (bangunruang) {
+	switch (mainmenu) {
 		// Kubus
 		case 1:
 			system("cls");
 			printf("===================================\n");
 			printf("==       Menghitung Kubus       ===\n");
 			printf("===================================\n");
-			printf(" Masukkan Sisi Kubus : ");
-  	   		scanf("%f", &s);
-  	   		/* Output tabung */
-   		  	printf("\n");
-  	   		printf(" Output: \n");
-  	   		vlkubus(s);
-			lpkubus(s);
+			printf(" Masukkan Sisi Kubus : "), scanf("%f", &s);
+  	   		printf("\n Output: \n"), vlkubus(s), lpkubus(s);
 			break;
 		
 		// Balok
@@ -69,17 +64,10 @@ float main(){
 			printf("===================================\n");
 			printf("==       Menghitung Balok       ===\n");
 			printf("===================================\n");
-			printf(" Masukkan panjang balok : ");
-			scanf("%f", &p);
-			printf(" Masukkan lebar balok : ");
-			scanf("%f", &l);
-			printf(" Masukkan tinggi balok : ");
-			scanf("%f", &t);
-			/* Output balok */
-			printf("\n");
-			printf(" Output: \n");
-			vlbalok(p,l,t);
-			lpbalok(p,l,t);
+			printf(" Masukkan panjang balok : "), scanf("%f", &p);
+			printf(" Masukkan lebar balok : "), scanf("%f", &l);
+			printf(" Masukkan tinggi balok : "), scanf("%f", &t);
+			printf("\n Output: \n"), vlbalok(p,l,t), lpbalok(p,l,t);
 			break;
 		
 		// Tabung
@@ -88,15 +76,9 @@ float main(){
 			printf("===================================\n");
 			printf("==      Menghitung Tabung       ===\n");
 			printf("===================================\n");
-			printf(" Masukkan jari - jari: ");
-			scanf("%f", &r);
-			printf(" Masukkan tinggi: ");
-			scanf("%f", &t2);
-			/* Output Tabung */
-			printf("\n");
-			printf(" Output: \n");
-			vltabung(r,t2);
-			lptabung(r,t2);
+			printf(" Masukkan jari - jari: "), scanf("%f", &r);
+			printf(" Masukkan tinggi: "), scanf("%f", &t2);
+			printf("\n Output: \n"), vltabung(r,t2), lptabung(r,t2);
 			break;
 
 		// Kerucut
@@ -105,17 +87,10 @@ float main(){
 			printf("===================================\n");
 			printf("==      Menghitung Kerucut      ===\n");
 			printf("===================================\n");
-			printf(" Masukkan tinggi: ");
-			scanf("%f", &t3);
-			printf(" Masukkan jari - jari: ");
-			scanf("%f", &r2);
-			printf(" Masukkan garis pelukis: ");
-			scanf("%f", &s);
-			/* Output Kerucut */
-			printf("\n");
-			printf(" Output: \n");
-			vlkerucut(t3,r2);
-			lpkerucut(t3,r2,s2);
+			printf(" Masukkan tinggi: "), scanf("%f", &t3);
+			printf(" Masukkan jari - jari: "), scanf("%f", &r2);
+			printf(" Masukkan garis pelukis: "), scanf("%f", &s);
+			printf("\n Output: \n"), vlkerucut(t3,r2), lpkerucut(t3,r2,s2);
 			break;
 
 		// Bola
@@ -124,13 +99,8 @@ float main(){
 			printf("===================================\n");
 			printf("==        Menghitung Bola       ===\n");
 			printf("===================================\n");
-			printf(" Masukkan jari - jari: ");
-			scanf("%f", &r3);
-			/* Output Bola */
-			printf("\n");
-			printf(" Output: \n");
-			vlbola(r3);
-			lpbola(r3);
+			printf(" Masukkan jari - jari: "), scanf("%f", &r3);
+			printf("\n Output: \n"), vlbola(r3), lpbola(r3);
 			break;
 		// Keluar Program
 		case 0:
@@ -140,9 +110,9 @@ float main(){
 			break;	
 	}
 
-	/////////////
-	// End Msg //
-	/////////////
+	/*
+	   End Msg 
+	            */
 	printf("\n");
 	printf("==================================================\n");
 	printf("												  \n");
@@ -151,7 +121,6 @@ float main(){
 	printf(" Informatics Engineering, Faculty of Engineering  \n");
 	printf(" University of Muhammadiyah Malang				  \n");
 	printf("												  \n");
-
 	printf("==================================================\n");
 	printf(" Tekan tombol apapun untuk kembali ke menu awal .. \n");	
 	printf("==================================================\n");
