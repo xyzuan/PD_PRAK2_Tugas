@@ -19,17 +19,17 @@ float lpbalok( float p, float l , float t ){
 // Luas Permukaan Tabung Function
 // Usage : lptabung( $var_jari-jari , $var_tinggi )
 float lptabung( float r, float t2 ){
-	printf(" Luas permukaan tabung = %.2f\n", 2 * 22 * r * ( r + t2 ) / 7 );
+	printf(" Luas permukaan tabung = %.2f\n", 2 * 3.14 * r * ( r + t2 ));
 }
 
 // Luas Permukaan Kerucut Function
 // Usage : lpkerucut( $var_tinggi , $var_jari-jari , $var_garis-pelukis )
 float lpkerucut( float t3, float r2, float s2 ){
-	printf(" Luas permukaan kerucut = %.2f\n", ( 22 * r2 * r2 / 7 ) + ( 22 * r2 * s2 / 7 ));
+	printf(" Luas permukaan kerucut = %.2f\n", ( 3.14 * r2 * r2 ) + ( 3.14 * r2 * s2 ));
 }
 
 // Luas Permukaan Bola Function
 // Usage : lpbola( $var_jari-jari )
 float lpbola( float r3 ){
-	printf(" Luas permukaan bola = %.2f\n", 4 * 22 * r3 * r3 / 7 );
+	printf(" Luas permukaan bola = %.2f\n", 4 * 3.14 * r3 * r3 );
 }
